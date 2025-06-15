@@ -257,7 +257,7 @@ void demonstrate_usage() {
     // or parse from file
     const std::string property_content = R"(
 Weapon: Entity
-name: string = Test
+name: string = Wooden Sword
 damage: int = 5
 range: double = 10.5
 magical: bool
@@ -283,7 +283,7 @@ magical: bool
         std::cout << "Weapon damage: " << weapon->get_property<int>("damage").value_or(0) << "\n";
         std::cout << "Weapon name: " << weapon->get_property<std::string>("name").value_or("Unknown") << "\n";
         std::cout << "Magical weapon: " << weapon->get_property<bool>("magical").value_or(false) << "\n";
-        weapon->set_property("name", "Hello world");
+        weapon->set_property("name", "Ban Hammer");
         std::cout << "Weapon name: " << weapon->get_property<std::string>("name").value_or("Unknown") << "\n";
     }
 }
